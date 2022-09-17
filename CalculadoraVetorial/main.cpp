@@ -16,12 +16,12 @@ using namespace std;
 void Apresenta_texto_menu(void)
 {
     cout << "+----------------------------------+" << endl;
-    cout << "Multiplicação por escalar: " << endl;
-    cout << "Soma vetorial: " << endl;
-    cout << "Combinação Linear: " << endl;
-    cout << "Produto escalar euclidiano: " << endl;
-    cout << "Norma 2 vetorial: " << endl;
-    cout << "Dependências linear: " << endl;
+    cout << "[1] Multiplicacao por escalar" << endl;
+    cout << "[2] Soma vetorial" << endl;
+    cout << "[3] Combinacao Linear" << endl;
+    cout << "[4] Produto escalar euclidiano" << endl;
+    cout << "[5] Norma 2 vetorial" << endl;
+    cout << "[6] Dependencias linear" << endl;
     cout << "+----------------------------------+" << endl;
     cout << "+ aperte a tecla 's' para sair" << endl;
     cout << "+----------------------------------+" << endl;
