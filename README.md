@@ -8,6 +8,7 @@ O objetivo do repositório é armazenar os códigos desenvolvidos para as ativid
   
 Biografia recomendada
  > Estruturas de Dados e Seus Algoritmos; Jayme L. Szwarcfiter e Lilian Markenzon; ISBN 978-8521617501; 3a Edição; Editora Gen-LTC; 2020
+ 
  > Estruturas de Dados e Algoritmos em C++; Adam Drozdek; ISBN 978-85-221-2573-9; 4a Edição; Editora CENGAGE Learning; 2017
  
 ![minerva](https://ufrj.br/wp-content/uploads/2022/01/marca-ufrj-horizontal-completa-positiva.png)
