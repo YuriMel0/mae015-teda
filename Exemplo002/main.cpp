@@ -49,7 +49,6 @@ class t_Curso
  public:
     string  Codigo_Curso;
     string  Nome_Curso;
-    t_Aluno *Lista_de_alunos = new t_Aluno[A];
     double Nota_mec;
 
     void Cadastro(string pCodigo_Curso, string pNome_Curso, double pNota_mec)
@@ -65,13 +64,7 @@ class t_Curso
         cout << "\n" << " Registro do Curso " << endl;
         cout << " Codigo Curso : " << Codigo_Curso << endl;
         cout << " Nome Curso: " << Nome_Curso << endl;
-        cout << " Nota MEC: " << Nota_mec << endl;
-        cout << " Alunos : " << "\n\n";
-              Lista_de_alunos[0].Print();
-              Lista_de_alunos[1].Print();
-              Lista_de_alunos[2].Print();
-              Lista_de_alunos[3].Print();
-              Lista_de_alunos[4].Print();
+        cout << " Nota MEC: " << Nota_mec << "\n\n";
     }
     double operator +(t_Curso B)
     {
@@ -93,21 +86,12 @@ int main()
     cout << "|         Exemplo 002: Aluno e Curso          |" << endl;
     cout << "+-------------------------------------------- +" << endl;
 
-    t_Aluno a1, a2, a3, a4, a5;
-    a1.Cadastro(12222222222, "Anonimo1", 4.7);
-    a2.Cadastro(13333333333, "Anonimo2", 4.8);
-    a3.Cadastro(14444444444, "Anonimo3", 4.9);
-    a4.Cadastro(15555555555, "Anonimo4", 5.0);
-    a5.Cadastro(16666666666, "Anonimo5", 5.1);
-
-    t_Curso c1;
+    t_Curso c1, c2;
     c1.Cadastro("BCMT01", "BCMT", 4.5);
-    c1.Lista_de_alunos[0] = a1;
-    c1.Lista_de_alunos[1] = a2;
-    c1.Lista_de_alunos[2] = a3;
-    c1.Lista_de_alunos[3] = a4;
-    c1.Lista_de_alunos[4] = a5;
+    c2.Cadastro("ICP", "BCC", 3.5);
     c1.Print();
+    c2.Print();
 
+    cout << "Media entre as notas do MEC dos cursos c1 e c2  : " << Media(c1,c2) << endl;
    return 0;
 }
