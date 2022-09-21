@@ -9,6 +9,8 @@
  * Data alteração: 17 de setembro de 2022
 */
 #include <iostream>
+#include <fstream>
+
 
 using namespace std;
 
@@ -82,7 +84,13 @@ void Menu(void)
 
 int main()
 {
+
+
+
     cout << "Exemplo 001: Calculadora Vetorial" << endl;
     Menu();
+
+
+
     return 0;
 }
