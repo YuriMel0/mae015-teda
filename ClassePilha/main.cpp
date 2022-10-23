@@ -13,10 +13,12 @@ int main()
 
     do
     {
+        cout << "----------------------------------------" << endl;
         cout << "digite 0 para para o programa!" << endl;
         cout << "digite 1 para inserir um elemento!" << endl;
         cout << "digite 2 para remover um elemento!" << endl;
         cout << "digite 3 para imprimir a pilha!" << endl;
+        cout << "----------------------------------------" << endl;
         cin >> opcao;
 
         if (opcao==1) {
@@ -32,6 +34,5 @@ int main()
 
     } while (opcao != 0);
     
-
     return 0;
 }
