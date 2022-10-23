@@ -9,12 +9,14 @@ class pilhadinamica {
     private:
         No* NoTopo;
     public:
-        pilhadinamica(); // construtor
-        ~pilhadinamica(); // destrutor
-        bool pilhavazia(); // verifica se a pilha está vazia
-        bool pilhacheia(); // verifica se a pilha está cheia
-        void inserir(t_dado item); // push
-        t_dado remover(); // pop
-        void imprimir(); // imprimir a pilha
+        pilhadinamica();
+        ~pilhadinamica();
+        bool pilhavazia();
+        bool pilhacheia();
+        void inserir(t_dado item);
+        t_dado remover();
+        void imprimir();
+        t_dado consultatopo();
+        t_dado consultaprox();
 
 };

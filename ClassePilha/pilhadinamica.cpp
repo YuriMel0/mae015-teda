@@ -40,6 +40,29 @@ using namespace std;
         
     }
 
+    t_dado pilhadinamica::consultatopo()
+    {
+        if (NoTopo == NULL) {
+            cout << "Nao e possivel consultar, pilha vazia" << endl;
+        } else {
+            t_dado dadoTopo = NoTopo->valor;
+            return dadoTopo;
+        }
+    }
+
+    t_dado pilhadinamica::consultaprox()
+    {
+        if (NoTopo) {
+            No* NoTemp;
+            NoTemp = NoTopo->proximo;
+            t_dado dadoprox = NoTemp->valor;
+            delete NoTemp;
+            return dadoprox;
+        } else {
+            cout << "Nao e possivel consultar, proximo dado nao existe!" << endl;
+        }
+    }
+
     void pilhadinamica::inserir(t_dado item)
     {
         if (pilhacheia()) {
