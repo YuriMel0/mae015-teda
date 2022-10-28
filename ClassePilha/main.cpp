@@ -5,9 +5,8 @@ using namespace std;
 
 int main()
 {
-    pilhadinamica pilha1;
-    t_dado item;
-    int opcao;
+    PilhaDinamica<int> pilhaInteiros;
+    int opcao, valor;
 
     cout << "Programa gerador de pilha" << endl;
 
@@ -19,6 +18,7 @@ int main()
         cout << "digite 3 para consultar o topo da pilha!" << endl;
         cout << "digite 4 para consultar o proximo valor apos o topo da pilha!" << endl;
         cout << "digite 5 para imprimir a pilha!" << endl;
+        cout << "digite 6 para esvaziar todos os elementos da pilha!" << endl;
         cout << "digite 0 para para o programa!" << endl;
         cout << "----------------------------------------" << endl;
         cin >> opcao;
@@ -27,23 +27,23 @@ int main()
         {
         case 1:
             cout << "digite o elemento a ser inserido: " << endl;
-            cin >> item;
-            pilha1.inserir(item);
+            cin >> valor;
+            pilhaInteiros.inserir(valor);
             break;
         case 2:
-            item = pilha1.remover();
-            cout << "intem removido: " << item << endl;
+            pilhaInteiros.remover();
             break;
         case 3:
-            item = pilha1.consultatopo();
-            cout << item << endl;
+            pilhaInteiros.consultaTopo();
             break;
         case 4:
-            item = pilha1.consultaprox();
-            cout << item << endl;
+            pilhaInteiros.consultaProx();
             break;
         case 5:
-            pilha1.imprimir();
+            pilhaInteiros.imprimir();
+            break;
+        case 6:
+            pilhaInteiros.~PilhaDinamica();
             break;
         }
 

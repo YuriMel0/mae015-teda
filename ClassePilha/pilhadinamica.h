@@ -1,22 +1,21 @@
-typedef int t_dado;
-
-struct No {
-    t_dado valor;
+template <typename T>
+class No {
+    T valor;
     No* proximo;
 };
 
-class pilhadinamica {
+template <typename T>
+class PilhaDinamica {
     private:
-        No* NoTopo;
+        No<T>* NoTopo;
     public:
-        pilhadinamica();
-        ~pilhadinamica();
-        bool pilhavazia();
-        bool pilhacheia();
-        void inserir(t_dado item);
-        t_dado remover();
+        PilhaDinamica();
+        ~PilhaDinamica();
+        bool pilhaVazia();
+        bool pilhaCheia();
+        void inserir(T item);
+        T remover();
         void imprimir();
-        t_dado consultatopo();
-        t_dado consultaprox();
-
+        T consultaTopo();
+        T consultaProx();
 };
