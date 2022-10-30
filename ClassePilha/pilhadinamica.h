@@ -1,7 +1,7 @@
 template <typename T>
-class No {
+struct No {
     T valor;
-    No* proximo;
+    No<T>* proximo;
 };
 
 template <typename T>
@@ -9,13 +9,13 @@ class PilhaDinamica {
     private:
         No<T>* NoTopo;
     public:
-        PilhaDinamica();
-        ~PilhaDinamica();
-        bool pilhaVazia();
-        bool pilhaCheia();
-        void inserir(T item);
-        T remover();
-        void imprimir();
-        T consultaTopo();
-        T consultaProx();
+       PilhaDinamica();
+       ~PilhaDinamica();
+       bool pilhaVazia();
+       bool pilhaCheia();
+       void inserir(T item);
+       T remover();
+       void imprimir();
+       T consultaTopo();
+       T consultaProx();
 };
