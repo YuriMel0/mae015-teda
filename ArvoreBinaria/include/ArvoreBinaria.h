@@ -31,7 +31,7 @@ class ArvoreBinaria
     protected:
 
     private:
-        No* raiz;
+        No *raiz;
 };
 
 #endif // ARVOREBINARIA_H

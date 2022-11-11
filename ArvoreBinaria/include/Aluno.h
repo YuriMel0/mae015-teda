@@ -9,14 +9,14 @@ class Aluno
 {
     public:
         Aluno();
-        Aluno(int p_ra, std::string p_nome);
+        Aluno(int, string);
         string obterNome();
-        int obterRa();
+        float obterCR();
 
     protected:
 
     private:
-        int ra;
+        float CR;
         std::string nome;
 };
 

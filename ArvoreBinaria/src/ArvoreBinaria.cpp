@@ -30,8 +30,8 @@ bool ArvoreBinaria::estaVazio()
 bool ArvoreBinaria::estaCheio()
 {
     try {
-        No* temp = new No;
-        delete temp;
+        No *temporario = new No;
+        delete temporario;
         return false;
     } catch(bad_alloc exception) {
         return true;
@@ -40,7 +40,39 @@ bool ArvoreBinaria::estaCheio()
 
 void ArvoreBinaria::inserir(Aluno aluno)
 {
+    if(estaCheio())
+    {
+        cout << "Arvore esta cheia, impossivel inserir novo Aluno" << endl;
+    } else {
+        No *NovoNo = new No();
+        NovoNo->aluno = aluno;
+        NovoNo->filhoEsquerda = nullptr;
+        NovoNo->filhoDireita = nullptr;
 
+        if(estaVazio())
+        {
+            raiz = NovoNo;
+        } else {
+            No *temporario = raiz;
+            while(temporario != nullptr) {
+                if(aluno.obterCR < temporario->aluno.obterCR()) {
+                    if(temporario->filhoEsquerda == nullptr) {
+                        temporario->filhoEsquerda = NovoNo;
+                        break;
+                    } else {
+                        temporario->filhoEsquerda;
+                    }
+                } else {
+                    if(temporario->filhoDireita == nullptr) {
+                        temporario->filhoDireita = NovoNo;
+                        break;
+                    } else {
+                        temporario = temporario->filhoDireita;
+                    }
+                }
+            }
+        }
+    }
 }
 
 void ArvoreBinaria::remover(Aluno aluno)

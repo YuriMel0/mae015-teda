@@ -1,16 +1,18 @@
 #include "Aluno.h"
+#include <string>
+using std::string;
 
 using namespace std;
 
 Aluno::Aluno()
 {
-    this->ra = 0;
+    this->CR = 0;
     this->nome = " ";
 }
 
-Aluno(int p_ra, std::string p_nome)
+Aluno::Aluno(float p_cr, std::string p_nome)
 {
-    ra = p_ra;
+    CR = p_cr;
     nome = p_nome;
 }
 
@@ -19,7 +21,7 @@ string Aluno::obterNome()
     return nome;
 }
 
-int Aluno::obterRa()
+float Aluno::obterCR()
 {
-    return ra;
+    return CR;
 }
