@@ -1,15 +1,17 @@
 #ifndef NO_H
 #define NO_H
 #include <string>
+#include "Pessoa.h"
 
 using namespace std;
 
 class No
 {
     public:
-        No(string nome);
+        No(Pessoa dado);
+        No();
         virtual ~No();
-        string nome;
+        Pessoa dado;
         No *proximo;
 
     protected:

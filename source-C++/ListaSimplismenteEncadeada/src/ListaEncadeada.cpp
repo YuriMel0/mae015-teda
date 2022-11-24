@@ -1,46 +1,55 @@
 #include "ListaEncadeada.h"
+#include <iostream>
+
+using namespace std;
 
 ListaEncadeada::ListaEncadeada()
 {
     inicio = nullptr;
-    fim = nullptr;
-
 }
 
 ListaEncadeada::~ListaEncadeada()
 {
+    No *aux = inicio;
+    while(aux != nullptr) {
+        aux = aux->proximo;
+        delete aux;
+    }
 }
 
-bool ListaEncadeada::listaVazia()
+void ListaEncadeada::inserirInicio(Pessoa pessoa)
 {
-    if (inicio)
-    {
-        return false;
+    No *NovoNo = new No(pessoa);
+
+    if(inicio == nullptr) {
+        inicio->proximo = NovoNo;
     } else {
-        return true;
+        No *aux = new No();
+        aux = inicio->proximo;
+        delete inicio->proximo;
+
+        inicio->proximo = NovoNo;
+        NovoNo->proximo = aux;
+
+        delete aux;
     }
 }
 
-bool ListaEncadeada::listaCheia()
+void ListaEncadeada::remover(int id)
 {
-    No *NovoNo;
-    try
-    {
-        NovoNo = new No;
-        delete NovoNo;
-        return false;
-    }
-    catch(bad_alloc exception)
-    {
-        return true;
-    }
-}
+    No *aux = inicio;
 
-void ListaEncadeada::inserirInicio(string nome)
-{
-
-}
-void ListaEncadeada::remover()
-{
+    if(inicio == nullptr) {
+        cout << "Lista vazia, impossivel remover elemento" << endl;
+    } else {
+        while(aux != nullptr) {
+        if (aux->dado.getId() != id) {
+            aux = aux->proximo;
+        } else {
+            delete aux;
+            break;
+          }
+        }
+    }
 
 }

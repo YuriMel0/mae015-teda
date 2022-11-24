@@ -1,8 +1,16 @@
 #include "No.h"
+#include "Pessoa.h"
 
-No::No(string p_nome)
+No::No(Pessoa p_dado)
 {
-    nome = p_nome;
+    dado = p_dado;
+    proximo = nullptr;
+}
+
+No::No()
+{
+    Pessoa pessoa(" ", 0);
+    dado = pessoa;
     proximo = nullptr;
 }
 

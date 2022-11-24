@@ -1,4 +1,31 @@
 # depslib dependency file v1.0
-1668910646 source:/home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ListaSimplismenteEncadeada/main.cpp
+1669326598 source:/home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ListaSimplismenteEncadeada/main.cpp
 	<iostream>
+	"ListaEncadeada.h"
+	"No.h"
+	"Pessoa.h"
+	<string>
+
+1669328237 source:/home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ListaSimplismenteEncadeada/src/No.cpp
+	"No.h"
+	"Pessoa.h"
+
+1669324970 /home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ListaSimplismenteEncadeada/include/No.h
+	<string>
+	"Pessoa.h"
+
+1669328131 source:/home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ListaSimplismenteEncadeada/src/ListaEncadeada.cpp
+	"ListaEncadeada.h"
+	<iostream>
+
+1669327406 /home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ListaSimplismenteEncadeada/include/ListaEncadeada.h
+	"No.h"
+	"Pessoa.h"
+
+1669325402 /home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ListaSimplismenteEncadeada/include/Pessoa.h
+	<string>
+
+1669325402 source:/home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ListaSimplismenteEncadeada/src/Pessoa.cpp
+	"Pessoa.h"
+	<string>
 
