@@ -23,6 +23,9 @@ class ArvoreBinaria
         bool estaCheio();
         void inserir(Aluno aluno);
         void remover(Aluno aluno);
+        void removerBusca(Aluno aluno, No*& NoAtual);
+        void deletarNo(No*& NoAtual);
+        void obterSucessor(Aluno& alunoSucessor, No* temporario);
         void buscar(Aluno& aluno, bool& busca);
         void imprimirPreOrdem(No* NoAtual);
         void imprimirEmOrdem(No* NoAtual);

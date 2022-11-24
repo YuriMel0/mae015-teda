@@ -77,12 +77,61 @@ void ArvoreBinaria::inserir(Aluno aluno)
 
 void ArvoreBinaria::remover(Aluno aluno)
 {
+    removerBusca(aluno, raiz);
+}
 
+void ArvoreBinaria::removerBusca(Aluno aluno, No*& NoAtual)
+{
+    if(aluno.obterCR() < NoAtual->aluno.obterCR()) {
+        removerBusca(aluno, NoAtual->filhoEsquerda);
+    } else if(aluno->obterCR() > NoAtual->aluno.obterCR()) {
+        removerBusca(aluno, NoAtual->filhoDireita);
+    } else {
+        deletarNo(NoAtual);
+    }
+}
+
+void ArvoreBinaria::deletarNo(No*& NoAtual)
+{
+    No *temporario = NoAtual;
+    if(NoAtual->filhoEsquerda == nullptr) {
+        NoAtual = NoAtual->filhoDireita;
+        delete temporario;
+    } else if(NoAtual->filhoDireita == nullptr) {
+        NoAtual = NoAtual->filhoEsquerda;
+        delete temporario;
+    } else {
+        Aluno alunoSucessor;
+        obterSucessor(alunoSucessor, NoAtual);
+        NoAtual->aluno = alunoSucessor;
+        removerBusca(alunoSucessor, NoAtual->filhoDireita);
+    }
+}
+
+void ArvoreBinaria::obterSucessor(Aluno& alunoSucessor, No* temporario)
+{
+    temporario = temporario->filhoDireita;
+    while(temporario->filhoEsquerda != nullptr) {
+        temporario = temporario->filhoEsquerda;
+    }
+    alunoSucessor = temporario->aluno;
 }
 
 void ArvoreBinaria::buscar(Aluno& aluno, bool& busca)
 {
-
+    busca = false;
+    No *NoAtual = raiz;
+    while(NoAtual != nullptr){
+        if(aluno.obterCR() < NoAtual->aluno.obterCR()) {
+            NoAtual = NoAtual->filhoEsquerda;
+        } else if(aluno.obterCR() > NoAtual->aluno.obterCR()) {
+            NoAtual = NoAtual->filhoDireita;
+        } else {
+            busca = true;
+            aluno = NoAtual->aluno;
+            break;
+        }
+    }
 }
 
 void ArvoreBinaria::imprimirPreOrdem(No* NoAtual)
