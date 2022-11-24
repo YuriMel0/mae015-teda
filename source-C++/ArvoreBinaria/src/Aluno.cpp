@@ -10,7 +10,7 @@ Aluno::Aluno()
     this->nome = " ";
 }
 
-Aluno::Aluno(float p_cr, std::string p_nome)
+Aluno::Aluno(int p_cr, string p_nome)
 {
     CR = p_cr;
     nome = p_nome;

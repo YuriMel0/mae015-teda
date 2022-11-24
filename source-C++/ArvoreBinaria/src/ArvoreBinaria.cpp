@@ -10,11 +10,17 @@ ArvoreBinaria::ArvoreBinaria()
 
 ArvoreBinaria::~ArvoreBinaria()
 {
+    deletarArvore(raiz);
 }
 
 void ArvoreBinaria::deletarArvore(No* NoAtual)
 {
+    if(NoAtual != nullptr) {
+        deletarArvore(NoAtual->filhoEsquerda);
+        deletarArvore(NoAtual->filhoDireita);
 
+        delete NoAtual;
+    }
 }
 
 No* ArvoreBinaria::obterRaiz()
@@ -55,7 +61,7 @@ void ArvoreBinaria::inserir(Aluno aluno)
         } else {
             No *temporario = raiz;
             while(temporario != nullptr) {
-                if(aluno.obterCR < temporario->aluno.obterCR()) {
+                if(aluno.obterCR() < temporario->aluno.obterCR()) {
                     if(temporario->filhoEsquerda == nullptr) {
                         temporario->filhoEsquerda = NovoNo;
                         break;
@@ -84,7 +90,7 @@ void ArvoreBinaria::removerBusca(Aluno aluno, No*& NoAtual)
 {
     if(aluno.obterCR() < NoAtual->aluno.obterCR()) {
         removerBusca(aluno, NoAtual->filhoEsquerda);
-    } else if(aluno->obterCR() > NoAtual->aluno.obterCR()) {
+    } else if(aluno.obterCR() > NoAtual->aluno.obterCR()) {
         removerBusca(aluno, NoAtual->filhoDireita);
     } else {
         deletarNo(NoAtual);
@@ -136,15 +142,29 @@ void ArvoreBinaria::buscar(Aluno& aluno, bool& busca)
 
 void ArvoreBinaria::imprimirPreOrdem(No* NoAtual)
 {
+    if(NoAtual != nullptr) {
+        cout << NoAtual->aluno.obterNome() << ": " << NoAtual->aluno.obterCR() << endl;
 
+        imprimirPreOrdem(NoAtual->filhoEsquerda);
+        imprimirPreOrdem(NoAtual->filhoDireita);
+    }
 }
 
 void ArvoreBinaria::imprimirEmOrdem(No* NoAtual)
 {
+    if(NoAtual != nullptr) {
+        cout << NoAtual->aluno.obterNome() << ": " << NoAtual->aluno.obterCR() << endl;
 
+        imprimirEmOrdem(NoAtual->filhoDireita);
+    }
 }
 
 void ArvoreBinaria::imprimirPosOrdem(No* NoAtual)
 {
+    if(NoAtual != nullptr) {
+        imprimirPosOrdem(NoAtual->filhoEsquerda);
+        imprimirPosOrdem(NoAtual->filhoEsquerda);
 
+        cout << NoAtual->aluno.obterNome() << ": " << NoAtual->aluno.obterCR() << endl;
+    }
 }

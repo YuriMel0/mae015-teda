@@ -2,3 +2,25 @@
 1584205420 source:c:\users\meloy\documents\projetos_git\teda-mae015\mae015-ted\arvorebinaria\main.cpp
 	<iostream>
 
+1669298758 source:/home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ArvoreBinaria/src/Aluno.cpp
+	"Aluno.h"
+	<string>
+
+1668909949 /home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ArvoreBinaria/include/Aluno.h
+	<iostream>
+	<string>
+
+1669298862 source:/home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ArvoreBinaria/src/ArvoreBinaria.cpp
+	"ArvoreBinaria.h"
+	<iostream>
+
+1669082476 /home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ArvoreBinaria/include/ArvoreBinaria.h
+	<iostream>
+	"Aluno.h"
+	<string>
+
+1669299059 source:/home/yuri/Documentos/projetos-github/curso-estruturas-dados/mae015-teda/source-C++/ArvoreBinaria/main.cpp
+	<iostream>
+	"ArvoreBinaria.h"
+	<string>
+
